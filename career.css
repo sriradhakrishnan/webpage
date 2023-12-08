@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: grey;
+}
+/* ===================      career page ============ */
+
+.form-label{
+    font-size: 20px;
+    color: black;
+}
+.invalid-feedback{
+    display:none;
+}
+.nav-item{
+    /* background-color: white; */
+    color: white;
+    list-style-type:none;
+    margin-left: 50px;
+    /* background-color: #4CAF50; */
+}
+
+.navigation_background{
+    background-image: url(./images/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* object-fit: cover; */
+}
+.naviagtion_page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 90px;
+}
+
+.career_head{
+    font-size: 70px;
+    color: rgb(255,255,255);
+    padding-bottom: 50px;
+}
+.job_dropdown{
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #00000080;
+    /* padding: 20px; */
+    /* display: flex;
+    align-items: center;
+    justify-content:center; */
+}
+#job_link{
+    width: 100%;
+    padding-right: 10px;
+    font-size: 18px;
+    background-color: rgb(255,255,255);
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width:950px){
+    .nav-item{
+       margin-bottom: 10px;
+       max-width: 100%;
+      
+    }
+    .nav-tabs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+ 
+}
+@media only screen and (max-width:450px){
+    .nav-item{
+       margin-bottom: 10px;
+    }
+    #job_link{
+       max-width: 80%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-left: 30px;
+       
+    }
+    .job_dropdown{
+        max-width: 100%;
+        display: flex;
+       align-items: center;
+       justify-content: center;
+       overflow-x: scroll;
+    }
+    .career_head{
+        font-size: 30px;
+    }
+}
+#job_link:hover{
+    /* background-color: #0056b3;
+    color: white; */
+    transform: scale(1.1); 
+    box-shadow: 5px 5px 10px pink;
+}
+
+
+
+
+/*=============== ===============   personal  details ===================  */
+
+.nav-link{
+    font-size: 20px;
+    color: white;
+    /* background-color: red; */
+    /* border-radius: 50px; */
+    /* background-color: grey; */
+}
+/* .nav-link:hover{
+    background-color:orange;
+    color: white;
+    box-shadow: 0px 5px 5px 0px white;
+} */
+
+
+.bg-dark-primary{
+    background-color:white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+
+/* ==============================-===   education details    ============================= */
+/* .education_details {
+    background-color: white; 
+    
+} */
+.bg-light-grey{
+    background-color: rgb(207, 194, 194);
+}
+
+.form-background{
+    font-family: Arial, sans-serif;
+    /* background-color:rgb(122, 117, 117); */
+    background-color:white;
+    color: white;
+    background-image: url(./images/3.avif);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+h1 {
+    /* text-align: center; */
+    color: orange;
+}
+
+#qualification-form{
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+#applicationForm {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+@media only screen and (max-width:950px){
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        font-size: 20px; 
+    }
+    #applicationForm {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    #qualification-form{
+        max-width: 100%;
+        max-height: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+      
+    }
+  
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;  
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+input[type="date"],
+input[type="number"],
+input[type="resume"]{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;   
+}
+select[type="text"]{
+    width:50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:450px){
+    /* #nextButton{
+        display: none;
+    } */
+    #button_next{
+        display: none;
+    }
+    #button_next_2{
+        display: none; 
+    }
+    #qualification-form{
+        /* flex-direction: row; */
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        
+    }
+    
+}
+/* input[type="submit"]:hover {
+    background-color:blue;
+    color: white;
+} */
+
+#message {
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: center;
+}
+#error {
+    color: #f44336;
+    font-weight: bold;
+    text-align: center;
+}
+.education_details{
+  background-image: url(./images/back10.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+textarea[type="address"]{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}  
+
+
+
+/* ============================   fresher/experience ============================ */
+.fresher_body {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url(./images/4.avif);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-check-label {
+    margin-left: 5px;
+}
+#experience-fields, #fresher-fields {
+    display: none;
+}
+
+
+
+/* ========================   buttton  css   =========================*/
+.button_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-bottom: 10px; */
+    padding-top: 130px;
+}
+.button-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.btn_1{
+    padding: 10px 10px;
+    background-color: blue;
+    color:white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 3px; 
+    text-decoration: none;
+    display: flex;
+    margin: 10px 10px;   
+}
+.btn_1>a{
+    text-decoration: none;
+    color: white;
+}
+.btn_1:hover{
+    background-color: #0056b3;
+    color: white;
+    transform: scale(1.1); /* Scale button on hover */
+    box-shadow: 5px 5px 10px white;
+}
+button {
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    font-size: 20px;
+    /* margin-left: 100px; */  
+}
+button>a{
+    text-decoration: none;
+    color: white;   
+}
+button>a:hover{
+    color: white;
+    background-color: blue;   
+}
+button:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: scale(1.1); /* Scale button on hover */
+    box-shadow: 5px 5px 10px white;
+}
+
+
+/* table {
+    width: 50%;
+    border-collapse: collapse;
+    color: black;
+}
+@media only screen and (max-width:430px) {
+    table{
+    
+      display: none;
+    }
+ }
+table, th, td {
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    color: white;
+} */
+
+
+
+
+
+
+/* =====================     terms and conditions   =========================== */
+.terms-body {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    /* background-color: #fff; */
+    background-image: url(./images/6.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.terms {
+    border: 1px solid;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    
+}
+.hidden {
+    display: none;
+}
+#success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+

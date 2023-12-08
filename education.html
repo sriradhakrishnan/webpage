@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education details</title>
+    <link rel="website icon" href="./images/2.avif">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="career.css">
+
+</head>
+<body>
+    
+<div class="container ">
+    <div class="row">
+       
+      <ul class="nav nav-tabs pb-4 pt-2 text-center" role="tablist">
+        <li class="nav-item ">
+          <a class="nav-link  active ps-4 pe-5" data-bs-toggle="tab" href="">&nbsp;Personal Details   </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link active  bg-primary text-light ps-4 pe-4" data-bs-toggle="tab" href="">Educational Details&nbsp;</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link active ps-4 pe-3" data-bs-toggle="tab" href="">Experience/Fresher &nbsp;</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link active ps-4 pe-4" data-bs-toggle="tab" href="" >Terms & Conditions </a>
+          </li>  
+      </ul>
+          <!-- <div class="tab-content">
+
+            <div id="menu1" class="container-fluid tab-pane "><br> -->
+
+                <!-- <div class="education_details ">
+                    <h1>Education Qualification</h1>
+                    <form id="qualification-form "> -->
+                  <div class="education_details pt-3  pb-2 ">
+                  <h1 class="ps-5">Education Qualification</h1>
+                  <form id="qualification-form">
+                        <label for="degree">Degree: <span style="color: red;">*</span></label>
+                        <input type="text" id="degree" name="degree" required>
+                        <label for="course">course name: <span style="color: red;">*</span></label>
+                        <input type="text" id="course" name="course" required>
+                        <label for="institution">University: <span style="color: red;">*</span></label>
+                        <input type="text" id="institution"  name="institution" required>
+                        <label for="percentage">percentage: <span style="color: red;">*</span></label>
+                        <input type="text" id="percentage" name="percentage" required>
+                        <label for="year">Year of Passout: <span style="color: red;">*</span></label>
+                        <input type="number" id="year" name="year" required min="2000" max="2024"><br>
+                        <div class="button_container ">
+                        <input type="submit" class="btn bg-primary pe-4 me-5 " value="Save" id="button_submit"  >
+                        <button class="btn btn-primary    p-2 ps-4 pe-4 ms-5 " id="button_back_3"  type="button" > Prev</button>
+                        <button class="btn btn-primary    p-2 ps-4 pe-4 ms-5 " id="button_next"  type="button" > Next </button>
+                        
+                   </div>
+                 </form>
+                 <div id="message"></div>
+                 <div id="error"></div>
+                  
+                </div> 
+                <!-- <div class="education_details pt-3  pb-2 ">
+                  <h1 class="ps-5">Education Qualification</h1>
+                  <form id="qualification-form">
+                      <label for="degree">Degree: <span style="color: red;">*</span></label>
+                      <input type="text" id="degree" name="degree" required>
+                      <label for="course">course name: <span style="color: red;">*</span></label>
+                      <input type="text" id="course" name="course" required>
+                      <label for="institution">University: <span style="color: red;">*</span></label>
+                      <input type="text" id="institution" name="institution" required>
+                      <label for="percentage">percentage: <span style="color: red;">*</span></label>
+                      <input type="text" id="percentage" name="percentage" required >
+                      <label for="year">Year of Passout: <span style="color: red;">*</span></label>
+                      <input type="number" id="year" name="year" required min="2000" max="2024"><br>
+                      <div class="button_container  pb-5 pt-3">
+                      <input type="submit" class="btn bg-primary pe-4 me-5 " value="Save" id="button_submit"  >
+                      <button class="btn btn-primary    p-2 ps-4 pe-4 ms-5 " id="button_back_3"  type="button" > Prev</button>
+                      <button class="btn btn-primary    p-2 ps-4 pe-4 ms-5 " id="button_next"  type="button" > Next </button>    
+                 </div>
+               </form>
+               <div id="message"></div>
+               <div id="error"></div> 
+              </div>  -->
+                <!-- <div class="output"></div> -->
+                <script>
+                     // Function to handle form submission
+
+     document.addEventListener("DOMContentLoaded", function() {
+    
+    // Get references to the form and the next button
+    const qualification_form  = document.getElementById("qualification-form");
+    // const button_submit = document.getElementById("button_submit");
+    const button_next = document.getElementById("button_next");
+    const button_back_3 = document.getElementById("button_back_3");
+
+             button_back_3.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.history.back(); // Go back to the previous page
+            });
+  
+          // Event listener for the "Next" button
+          button_next.addEventListener('click', function(event) {
+              event.preventDefault();
+              alert("Kindly complete all the required fields");
+          });
+  
+          // Event listener for the form submission
+          qualification_form.addEventListener('submit', function(event) {
+              event.preventDefault();
+              window.location.href = "./experience.html"; 
+          });
+ });
+    document.getElementById('qualification-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form data
+    const degree = document.getElementById("degree").value;
+    const course = document.getElementById("course").value;
+    const institution = document.getElementById("institution").value;
+    const percentage = document.getElementById("percentage").value;
+    const year = document.getElementById("year").value;
+
+    // Create an object to store the data
+    const educationalData = {
+        degree: degree,
+        course: course,
+        institution: institution,
+        percentage: percentage,
+        year: year
+    };
+
+    // Store the data in local storage as a JSON string
+    localStorage.setItem('educationalData', JSON.stringify(educationalData));
+
+    // Display a success message
+   
+    setTimeout(function() {
+        document.getElementById("degree").value = "";
+        document.getElementById("course").value = "";
+        document.getElementById("institution").value = "";
+        document.getElementById("percentage").value = "";
+        document.getElementById("year").value = "";
+        document.getElementById("qualification-form").reset();
+    },60000);
+    
+    alert("Form data saved in local storage.");
+    document.getElementById("error").textContent = "";
+    document.getElementById("message").textContent = "Application details submitted ";
+    // Reset the form
+});
+
+
+
+var degreeInput = document.getElementById("degree");
+degreeInput.addEventListener("input", function() {
+this.value = this.value.replace(/\d/g, ''); // Remove numeric characters
+ });
+
+ var courseInput = document.getElementById("course");
+courseInput.addEventListener("input", function() {
+this.value = this.value.replace(/\d/g, ''); // Remove numeric characters
+ });
+
+ var institutionInput = document.getElementById("institution");
+institutionInput.addEventListener("input", function() {
+this.value = this.value.replace(/\d/g, ''); // Remove numeric characters
+ });
+
+ var percentageInput = document.getElementById("percentage");
+ percentageInput.addEventListener("input", function() {
+this.value = this.value.replace(/\D/g, ''); // Remove numeric characters
+ });
+
+ var yearInput = document.getElementById("year");
+yearInput.addEventListener("input", function() {
+this.value = this.value.replace(/\D/g, ''); // Remove numeric characters
+ });
+
+    </script>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hosting_navbar{
+    /* background-color: black; */
+    color: white;
+    padding: 10px;
+    background-image: url(./images/services.jpg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hosting_cloud1{
+    position: absolute;
+    z-index: 0.5;
+}
+.hosting_cloud2{
+    position: absolute;
+    z-index: -0.5;
+}
+.hosting_cloud2{
+    position: absolute;
+    z-index: 0.5;
+}
+
+.hosting_heading{
+    /* margin-top: 100px; */
+    
+    font-size: 50px;
+
+}
+.hosting_search{
+    margin-bottom: 100px;
+    width: 70%;
+
+}
+.hosting_started{
+    font-size: 50px;
+    /* margin-bottom: 80px; */
+}
+.host_services{
+    background-image: url(./images/services.jpg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* input[type="search"]{
+    width: 50%;
+
+} */
+.card-text{
+    border-bottom: 10px;
+    font-size: 20px;
+}
+.bg-primary-text{
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.bg-primary-text:hover{
+    color: white;
+    background-color:black;
+}
+.cards_links{
+    border: none;
+    text-align: center;
+}
+.building_site{
+    background-color: rgb(113,86,145);
+    color: white;
+}
+input[type="text"]{
+    /* margin-top: 20px; */
+    width: 48%;
+    padding: 10px;
+}
+input[type="textarea"]{
+    margin-top: 20px;
+    width: 97%;
+    padding: 50px;
+}
+h6{
+    font-size: 16px;
+    color: white;
+}
+h3{
+    color: aqua;
+}
+.hosting_details{
+    background-color: rgb(38,6,76);
+}
+.nav-item{
+    padding-left: 35px;
+    /* align-items: center;
+    justify-content: center;
+    display: flex; */
+   
+}

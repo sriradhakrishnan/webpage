@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience/fresher</title>
+    <link rel="website icon" href="./images/2.avif">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="career.css">
+
+</head>
+<body>
+    
+<div class="container  pb-5">
+    <div class="row">
+          <ul class="nav nav-tabs pb-4 pt-2 text-center" role="tablist">
+            <li class="nav-item ">
+              <a class="nav-link active  ps-4 pe-5" data-bs-toggle="tab" href="">&nbsp;Personal Details   </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active   ps-4 pe-4" data-bs-toggle="tab" href="">Educational Details</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link  active bg-primary text-light pe-3 ps-4" data-bs-toggle="tab" href="">Experience/Fresher &nbsp;</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link active ps-4 pe-2" data-bs-toggle="tab" href="" >&nbsp;Terms & Conditions &nbsp;</a>
+              </li>  
+          </ul>
+
+
+         <!-- ======================================== -->
+
+    
+    <div class="container  fresher_body">
+        <h1>Job Application</h1>
+
+        <form id="job-application-form">
+            
+            <div class="form-group">
+                <label for="experience">Are you experienced?</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="experienced" name="experience" value="experienced" >
+                    <label class="form-check-label" for="experienced">Experienced</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="fresher" name="experience" value="fresher">
+                    <label class="form-check-label" for="fresher">Fresher</label>
+                </div>
+            </div>
+
+            <!--  for experienced candidates -->
+            <div class="form-group " id="experience-fields" style="display:none;">
+                <label for="companyname">Company Name: <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" id="companyname" >
+                <label for="skills">Skills: <span style="color: red;">*</span></label>
+                <select name="skills" id="skills" type="text" >
+                    <option value="#">Frontend</option>
+                    <option value="#">Backend</option>
+                    <option value="#">React-js</option>
+                    <option value="#">Django</option>
+                    <option value="#">Python</option>
+                    <option value="#">Java</option>
+                    <option value="#">Spring boot</option>
+                    <option value="#">Machine learning</option>
+                 </select>
+                <label for="yearsOfExperience">Years of Experience: <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" id="yearsOfExperience" >
+               
+            </div>
+            <!-- for freshers -->
+            <div class="form-group " id="fresher-fields" style="display:none;">
+                <label for="qualification">Qualification: <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" id="qualification">
+                <label for="skills">Skills: <span style="color: red;">*</span></label>
+                <select name="skills" id="skills" type="text" >
+               <option value="#">Frontend</option>
+               <option value="#">Backend</option>
+               <option value="#">React-js</option>
+               <option value="#">Django</option>
+               <option value="#">Python</option>
+               <option value="#">Java</option>
+               <option value="#">Spring boot</option>
+               <option value="#">Machine learning</option>
+            </select>
+            </div>
+            <!-- buttons -->
+            <div class="button-container pb-5 pt-3">
+            <input type="submit" class="btn bg-primary pe-4 me-5 " value="Save" id="button_submit_2" >
+            <button type="button" class="btn btn-primary ms-5 p-2 ps-3 pe-3"   id="button_back_2" >  Prev</button>
+            <button type="button" class="btn btn-primary ms-5 p-2 ps-3 pe-3"   id="button_next_2"> Next </button>
+        </div>
+        <!-- buttons -->
+        </form>
+
+    </div>
+    
+
+
+   <!-- javascript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+            const experienceRadio = document.getElementById("experienced");
+            const fresherRadio = document.getElementById("fresher");
+            const experienceFields = document.getElementById("experience-fields");
+            const fresherFields = document.getElementById("fresher-fields");
+            const jobApplicationForm = document.getElementById("job-application-form");
+
+            // radio buttons
+            experienceRadio.addEventListener("change", function () {
+                if (experienceRadio.checked) {
+                    experienceFields.style.display = "block";
+                    fresherFields.style.display = "none";
+                }
+            });
+          
+            fresherRadio.addEventListener("change", function () {
+                if (fresherRadio.checked) {
+                    experienceFields.style.display = "none";
+                    fresherFields.style.display = "block";
+                }
+            });
+
+            //  "Next" button
+            const button_next_2 = document.getElementById("button_next_2");
+            button_next_2.addEventListener('click', function (event) {
+                event.preventDefault();
+                alert("Kindly complete all the required fields");
+            });
+
+            //  "Back" button
+            const button_back_2 = document.getElementById("button_back_2");
+            button_back_2.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.history.back(); // Go back to the previous page
+            });
+
+            // form submission
+      jobApplicationForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+                const experience = document.querySelector('input[name="experience"]:checked').value;
+
+                if (experience === "experienced") {
+                    const yearsOfExperience = document.getElementById("yearsOfExperience").value;
+                    const companyname = document.getElementById("companyname").value;
+                    const skills = document.getElementById("skills").value;
+
+
+                  
+                    const experienceData = {
+                        yearsOfExperience: yearsOfExperience,
+                        companyname: companyname,
+                        skills: skills
+                    };
+               
+                    // filling the fields
+                    if (!yearsOfExperience || !companyname || !skills) {
+                   alert("Please complete all the required fields.");
+                     return; 
+                   }
+
+
+                    localStorage.setItem('experienceData', JSON.stringify(experienceData));
+                } 
+                else if( experience === "fresher"){
+                    const qualification = document.getElementById("qualification").value;
+                    const skills = document.getElementById("skills").value;
+                   
+                // filling the fields
+                    if (!qualification || !skills) {
+                     alert("Please complete all the required fields.");
+                    return;
+                   }
+ 
+                    const freshersData = {
+                        qualification: qualification,
+                        skills: skills
+                    };
+
+                    localStorage.setItem('freshersData', JSON.stringify(freshersData));
+                }
+                // Display a success message
+                alert("Form data saved in local storage.");
+        
+        // timing for the deletating the fields
+        setTimeout(function () {
+        if (experience === "experienced") {
+            document.getElementById("yearsOfExperience").value = "";
+            document.getElementById("companyname").value = "";
+            document.getElementById("skills").value = "";
+        } else if (experience === "fresher") {
+            document.getElementById("qualification").value = "";
+            document.getElementById("skills").value = "";
+        }
+        // Reset the form
+        jobApplicationForm.reset();
+    }, 30000);
+            //   navigate the page
+                window.location.href = "./terms.html";
+            });
+        });
+                   var companyInput = document.getElementById("companyname");
+                     companyInput.addEventListener("input", function() {
+                    this.value = this.value.replace(/\d/g, ''); // Remove numeric characters
+                      });
+                      var yearexperienceInput = document.getElementById("yearsOfExperience");
+                      yearexperienceInput.addEventListener("input", function() {
+                    this.value = this.value.replace(/\D/g, ''); // Remove numeric characters
+                      });
+                      var qualificationInput = document.getElementById("qualification");
+                     qualificationInput.addEventListener("input", function() {
+                    this.value = this.value.replace(/\d/g, ''); // Remove numeric characters
+                      });
+
+    </script> 
+
+</div>
+</div>
+
+</body>
+</html>

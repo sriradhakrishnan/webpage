@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Nunito:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'Nunito', sans-serif;
+}
+.bg-dark-balck{
+    background-color:black ;
+    color: white;
+   
+    /* transform: rotate(0deg); */
+    /* transform: translate(100px); */
+    transition: width 1s,height 1s,transform 1s;
+   
+}
+/* .about_pictutes{
+   background-image: url(./images/back7.avif);
+   background-repeat: no-repeat;
+   background-size: contain;
+} */
+/* .about_heading{
+   padding: 300px;
+   text-align: center;
+    color:red;
+    font-size: 100px;
+    font-weight: bolder;
+  
+} */
+.carousel-control-prev{
+    display: none !important;
+}
+.carousel-control-next{
+    display: none !important;
+}
+
+.bg-dark-balck:hover{
+    /* transform: scale(1.05); */
+
+    /* width: 500px;
+    height: 300px; */
+    transform: scale(1.09);
+    
+}
+
+.bg-dark-purple{
+    background-color: rgb(252, 228, 252);
+}
+.background-image{
+    background-image: url(./images/back3.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.bg-light-blue{
+    color:rgb(110,140,149);
+}
+.bg-light-primary{
+    background-color:rgb(24,99,128);
+    color: rgb(255, 255, 255);
+}
+.bg-dark-blue{
+    color: rgb(0,62,80);
+    font-weight: bolder;
+    font-size: 40px;
+}
+.about-contact{
+    color: white;
+    align-items: start;
+}
+.clients-review{
+    /* background-color: rgb(231,240,242); */
+    background-color: rgb(57,122,140);
+}
+.client-head{
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.box-radius{
+    border-radius: 50px;
+}
+.about-background{
+    background-color:rgb(150,53,150);
+    padding-top: 40px;
+    padding-bottom: 40px;
+   
+}
+
+.application-details{
+    background-color:black;
+    /* background-color:rgb(248, 218, 248); */
+}
+
+.form-background{
+    font-family: Arial, sans-serif;
+    
+}
+
+input[type="email"],
+input[type="tel"]{
+    width: 49%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color:rgb(138,142,149) ;
+}
+input[type="text"]{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+}
+
+input[type="submit"] {
+    background-color:yellow;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+textarea[type="address"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#message {
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: center;
+}
+
+#error {
+    color: #f44336;
+    font-weight: bold;
+    text-align: center;
+}
+.nav-item{
+    background-color:black;
+    border-radius: 15px;
+    color: white;
+    border: none;
+    margin: 0 auto;
+}
+.nav-link{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+.nav-link:hover{
+  background-color:rgb(28,175,180) ;
+  color: black;
+  box-shadow: 12px 12px 12px 0px black;
+  border-radius: 15px;
+}
+.progress-bar{
+  background-color: rgb(28,175,180);
+}
+.bg-light-green {
+  background-color: rgb(28,175,180);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tab-pane{
+  font-size: 16px;
+  font-weight:bolder;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.sub_name{
+    font-size: 50px;
+    font-weight: bold;
+    /* background-color: red; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn-light{
+    border-radius: 20px;
+}
+
+/* carousel */
